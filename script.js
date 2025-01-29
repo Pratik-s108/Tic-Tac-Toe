@@ -264,6 +264,7 @@ btn1.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
+        restartGame();
     }
    
 };
@@ -274,17 +275,19 @@ btn2.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
+        restartGame();
     }
     
 };
 btn3.onclick = function(){
     if (btn3.innerText === "") {  // Prevent change if already set
         btn3.innerText = chance;
-    }
         setPlayerColor(btn3);
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
+        restartGame();
+    }
     
 };
 btn4.onclick = function(){
@@ -294,6 +297,7 @@ btn4.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
+        restartGame();
     }
     
 };
@@ -304,6 +308,7 @@ btn5.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
+        restartGame();
     }
     
 };
@@ -314,6 +319,7 @@ btn6.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
+        restartGame();
     }
     
 };
@@ -324,6 +330,7 @@ btn7.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
+        restartGame();
     }
     
 };
@@ -334,6 +341,7 @@ btn8.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
+        restartGame();
     }
     
 };
@@ -344,6 +352,7 @@ btn9.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
+        restartGame();
     }
     
 };
