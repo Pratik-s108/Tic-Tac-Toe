@@ -24,10 +24,10 @@ function setPlayerColor(button) {
     }
 };
 
-let winsound = new Audio ("winner.mp3");
-let clickSound = new Audio("sound2.mp3"); // Replace with your sound file path
-let clickSound2 = new Audio("sound3.mp3"); // Replace with your sound file path
-let drawsound = new Audio("draw.mp3");
+let winsound = new Audio ("used/winner.mp3");
+let clickSound = new Audio("used/sound2.mp3"); // Replace with your sound file path
+let clickSound2 = new Audio("used/sound3.mp3"); // Replace with your sound file path
+let drawsound = new Audio("used/draw.mp3");
 
 function playClickSound() {
     if (chance ==='X'){
@@ -264,7 +264,6 @@ btn1.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
-        
     }
    
 };
@@ -275,19 +274,17 @@ btn2.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
-        
     }
     
 };
 btn3.onclick = function(){
     if (btn3.innerText === "") {  // Prevent change if already set
         btn3.innerText = chance;
+    }
         setPlayerColor(btn3);
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
-        
-    }
     
 };
 btn4.onclick = function(){
@@ -297,7 +294,6 @@ btn4.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
-        
     }
     
 };
@@ -308,7 +304,6 @@ btn5.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
-      
     }
     
 };
@@ -319,7 +314,6 @@ btn6.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
-       
     }
     
 };
@@ -330,7 +324,6 @@ btn7.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
-     
     }
     
 };
@@ -341,7 +334,6 @@ btn8.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
-       
     }
     
 };
@@ -352,7 +344,6 @@ btn9.onclick = function(){
         playClickSound(); // Play sound on click
         chance_chance();
         checkwin();
-       
     }
     
 };
