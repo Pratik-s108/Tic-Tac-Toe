@@ -1,0 +1,35 @@
+pipeline{
+    agent any
+    
+    stages{
+        stage("Code Clone"){
+            steps{
+                echo "Code Clone Stage"
+                git url: "https://github.com/Pratik-s108/Tic-Tac-Toe.git", branch: "newjs_script"
+            }
+        }
+        stage("Code Build & Test"){
+            steps{
+                echo "Code Build Stage"
+                sh "docker build -t tictactoe ."
+            }
+        }
+        stage("Push To DockerHub"){
+            steps{
+                withCredentials([usernamePassword(
+                    credentialsId:"DockerHub_ID",
+                    usernameVariable:"dockerHubUser", 
+                    passwordVariable:"dockerHubPass")]){
+                sh 'echo $dockerHubPass | docker login -u $dockerHubUser --password-stdin'
+                sh "docker tag tictactoe:latest pratiklanjewar4198040/tictactoe:latest"
+                sh "docker push pratiklanjewar4198040/tictactoe:latest"
+                }
+            }
+        }
+        stage("Deploy"){
+            steps{
+                sh "docker compose down && docker compose up -d "
+            }
+        }
+    }
+}
