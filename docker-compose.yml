@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    container_name: tictactoe
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - .:/usr/share/nginx/html
+    networks:
+      - web_network
+
+networks:
+  web_network:
+    driver: bridge
